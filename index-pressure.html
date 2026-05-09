@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pressure</title>
+  <link rel="stylesheet" href="styles-pressure.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Underwater Extraction Shooter Prototype</p>
+        <h1>Pressure</h1>
+      </div>
+      <div class="topbar-copy">
+        <p>Descend, secure stolen research, survive the crush, and get out before the ocean gets inside your helmet.</p>
+      </div>
+    </header>
+
+    <section class="hud" aria-label="Game HUD">
+      <div id="statGrid" class="stat-grid"></div>
+      <div class="mission-box">
+        <span id="levelLabel">Level 1</span>
+        <strong id="objectiveText">Booting dive systems...</strong>
+        <p id="radioText">Command channel stable.</p>
+      </div>
+    </section>
+
+    <section class="play-area">
+      <div class="canvas-frame">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Pressure game canvas"></canvas>
+        <div id="floodOverlay" class="flood-overlay" aria-hidden="true"></div>
+        <div id="flashOverlay" class="flash-overlay" aria-hidden="true"></div>
+        <div id="messageOverlay" class="message-overlay">
+          <div class="message-card">
+            <p id="messageEyebrow" class="message-eyebrow">Pressure</p>
+            <h2 id="messageTitle">Descend Into The Facility</h2>
+            <p id="messageBody">Three levels. One extraction. Creatures below, divers inside, and the pressure gets worse the deeper you go.</p>
+            <button id="messageButton" class="action-button" type="button">Start Dive</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="briefing">
+        <h2>Dive Brief</h2>
+        <p>Each level is a deeper section of the facility. Collect the tech core, survive contact, then reach the next hatch.</p>
+        <div id="levelList" class="level-list"></div>
+        <div class="controls">
+          <h3>Controls</h3>
+          <p><kbd>WASD</kbd> Move</p>
+          <p><kbd>Mouse</kbd> Aim</p>
+          <p><kbd>Click</kbd> Fire harpoon</p>
+          <p><kbd>Shift</kbd> Burst swim</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="game-pressure.js"></script>
+</body>
+</html>
